@@ -1,29 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
+    <!--Simple response design for auto-scale text content-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="http://krasyid822.github.io/page404.html">
-    <!--Font-->
+    <!--Default page for empty link or as base page (affecting commands such as image insertion, may not work)-->
+    <base href="page404.html">
+    <!--Connect to Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Import Poetsen One font style-->
     <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Poetsen+One&display=swap" rel="stylesheet">
-    <style>
-        .poetsen-one-regular {
-      font-family: "Poetsen One", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-    }
-        </style>
-
+    <!--Import Open Sans font style-->
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poetsen+One&display=swap" rel="stylesheet">
     <title>Web Portofolio</title>
+    <style>
+        .open-sans-regular {
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+        }
+        .poetsen-one-regular {
+        font-family: "Poetsen One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+        h1 {
+            text-align: center;
+        }
+        /* Container that triggers the hover effect */
+        .hover-container {
+            position: relative;
+        }
+
+        /* Popup window styling */
+        .popup {
+            display: none; /* Initially hidden */
+            position: absolute;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            border-radius: 5px;
+            white-space: nowrap; /* Ensure content stays in one line */
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+            transform: translateX(-10%);
+        }
+        .popup-left-down {
+                bottom: 36%; /* Position the popup below the container */
+                left: 109%; /* Center the popup horizontally */
+        }
+        .popup-left-up {
+                top: 30%; /* Position the popup below the container */
+                left: 110%; /* Center the popup horizontally */
+        }
+        .popup-right-up {
+                top: 30%; /* Position the popup below the container */
+                right: -40%; /* Center the popup horizontally */
+        }
+        .popup-right-down {
+                bottom: 30%; /* Position the popup below the container */
+                right: 0%; /* Center the popup horizontally */
+        }
+
+        @media (max-width: 768px) {
+            body {
+                width: 100%;
+            }
+            
+        }
+
+        /* Show the popup when the container is hovered */
+        .hover-container:hover .popup {
+            display: block;
+            /* Fix popup class content overwritten */
+            z-index: 2;
+        }
+        .cstm-image45 {
+            transform: rotate(45deg);
+        }
+        .cstm-image-45 {
+            transform: rotate(-45deg);
+        }
+        .cstm-image135 {
+            transform: rotate(135deg);
+        }
+        .cstm-image-135 {
+            transform: rotate(-135deg);
+        }
+    </style>
 </head>
-<body background="pixel_awan.jpg" height="100%" width="100%">
-    <h1 class="poetsen-one-regular"><center>Web Portofolio</center></h1>
-    <table border="1" align="center">
+<body>
+    <h1 class="poetsen-one-regular">Web Portofolio</h1>
+    <table border="0" align="center">
+        <tr>
+            <td>
+                <div class="hover-container">
+                    <img class="cstm-image45" height="50px" src="arrow.png">
+                    <div class="popup popup-left-up">
+                        <b class="poetsen-one-regular">Tentang Saya:</b>
+                        <br>
+                        <p class="open-sans-regular">Saya adalah seorang mahasiswa di <br>Politeknik Negeri Medan.<br>Menempuh pendidikan sebagai software engineer.<br>Di jurusan Komputer Informatika,<br>program studi Teknologi Rekayasa Perangkat Lunak <br>(TRPL).<br><br>Nama saya adalah Rasyid Kurniawan,<br>usia 19 tahun. </p>
+                    </div>
+                </div>
+            </td>
+            <td></td>
+            <td>
+                <div class="hover-container">
+                    <img class="cstm-image135" height="50px" src="arrow.png">
+                    <div class="popup popup-right-up">
+                        <b class="poetsen-one-regular">Keterampilan Saya:</b>
+                        <br>
+                        <p class="open-sans-regular">Saya mampu, <br><br>- Membuat Web<br>- Mendesain Web<br>- Membangun jaringan lokal<br>- Memberbaiki masalah pada komputer<br>- Memahami bahasa pemrograman: HTML, <br>CSS, JS, PHP, C++, Java</p>                        
+                    </div>
+                </div>
+            </td>
+        </tr>
         <tr>
             <td></td>
+            <td><img src="Profile.jpg"></td>
+            <td></td>
+            <tr>
+                <td>
+                    <div class="hover-container">
+                        <img class="cstm-image-45" height="50px" src="arrow.png">
+                        <div class="popup popup-left-down">
+                            <b class="poetsen-one-regular">Pengalaman Saya:</b>
+                            <br>
+                            <p class="open-sans-regular">Saya lulusan dari SMKS Teknologi Balam pada <br>tahun 2023 silam.<br>Dan mendapatkan pengalaman sewaktu PKL <br>(Praktik Kerja Lapangan) di CV. Kantata Net <br>dibangku kelas 11, selama 6 bulan.<br><br>- Saya berhasil memecahkan masalah-masalah <br>umum pada akses poin yang gagal tersambung <br>pada jaringan internet.<br>- Saya berhasil menemukan penyebab menurunya <br>dBm padahal jaraknya masih dekat pada jaringan <br>fiber optik 1 core</p>
+                        </div>
+                    </div>
+                </td>
+                <td></td>
+                <td>   
+                    <div class="hover-container">
+                        <img class="cstm-image-135" height="50px" src="arrow.png">
+                        <div class="popup popup-right-down">
+                            <b class="poetsen-one-regular">Info Kontak:</b>
+                            <br>
+                            <p class="open-sans-regular">
+                                <a href=""><img src="whatsapp.png" height="20px"></a>
+                                <a href="https://www.instagram.com/rakurn299/"><img src="instagram.jpg" height="20px"></a>
+                                <a href="https://www.facebook.com/rasyid.kurniawan.50/"><img src="facebook.jpg" height="20px"></a>
+                                <a href="https://x.com/RasyidKurn11291"><img src="twitter.jpg" height="20px"></a>
+                            </p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
         </tr>
     </table>
+    <center class="open-sans-regular">klik/hover ikon panah untuk detail informasi</center>
 </body>
 </html>
